@@ -22,7 +22,7 @@ Cloudinary
 
 📦 Instal·lació
 1️⃣ Clonar el repositori
-git clone https://github.com/EL_TEU_USUARI/task-manager-api.git
+git clone https://github.com/JanPinto97/NODE-07
 cd task-manager-api
 
 2️⃣ Instal·lar dependències
@@ -45,24 +45,6 @@ Servidor disponible a:
 
 http://localhost:3000
 
-🔐 Variables d’entorn necessàries
-
-Exemple de .env.example:
-
-# MongoDB
-MONGO_URI=mongodb://localhost:27017/taskmanager
-
-# JWT
-JWT_SECRET=clau_secreta_llarga_i_segura
-JWT_EXPIRES_IN=7d
-
-# Cloudinary
-CLOUDINARY_CLOUD_NAME=el_teu_cloud_name
-CLOUDINARY_API_KEY=123456789
-CLOUDINARY_API_SECRET=clau_ficticia
-
-
-⚠️ El fitxer .env NO s’ha de pujar al repositori.
 
 🔐 Sistema d’autenticació i autorització
 🔑 Autenticació (JWT)
@@ -103,14 +85,19 @@ Canviar el rol d’altres usuaris
 
 📡 Endpoints disponibles
 🔐 Autenticació (/api/auth)
+<br>
 Mètode	Ruta	Descripció
+<br>
 POST	/register	Registrar usuari
 POST	/login	Iniciar sessió
 GET	/me	Perfil de l’usuari autenticat
 PUT	/profile	Actualitzar perfil
 PUT	/change-password	Canviar contrasenya
+<br>
 📋 Tasques (/api/tasks) – Protegides
+<br>
 Mètode	Ruta	Descripció
+<br>
 POST	/	Crear tasca
 GET	/	Obtenir tasques de l’usuari
 GET	/:id	Obtenir tasca per ID
@@ -119,16 +106,23 @@ DELETE	/:id	Eliminar tasca
 GET	/stats	Estadístiques de l’usuari
 PUT	/:id/image	Actualitzar imatge
 PUT	/:id/image/reset	Reset imatge
+<br>
 📤 Upload d’imatges (/api/upload) – Protegides
+<br>
 Mètode	Ruta	Descripció
+<br>
 POST	/local	Pujar imatge local
 POST	/cloud	Pujar imatge a Cloudinary
+<br>
 👑 Administració (/api/admin) – Només admin
+<br>
 Mètode	Ruta	Descripció
+<br>
 GET	/users	Llistar usuaris
 GET	/tasks	Llistar totes les tasques
 DELETE	/users/:id	Eliminar usuari
 PUT	/users/:id/role	Canviar rol
+<br>
 🧪 Exemples d’ús (Postman)
 📝 Registrar usuari
 POST /api/auth/register
